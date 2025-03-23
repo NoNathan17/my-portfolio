@@ -9,7 +9,7 @@ export default function Landing() {
         <div className="flex flex-col gap-5 w-2/5">
           {/* intro stuff */}
             <p className="text-7xl font-bold">hi! i'm nathan &#x1F604;</p>
-            <p className="text-xl font-normal"> full-stack dev | software engineer | CS @ UCI</p>
+            <p className="text-xl font-normal"> full-stack dev | software engineering | CS @ UCI</p>
             <p className="text-2xl font-extralight"> I'm a self-motivated software developer passionate <br></br> about creating and contributing to meaningful solutions.
             Always eager to learn and gain hands-on experience. &#x1F680;</p>
 
