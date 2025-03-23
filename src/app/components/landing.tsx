@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaRegFileAlt } from "react-icons/fa";
 
 export default function Landing() {
   return (
-    <div className="flex h-screen">
+    <div id="/" className="flex h-screen">
       <div className="flex flex-row mx-auto items-center justify-center w-5/6 h-3/4 gap-32">
         <div className="flex flex-col gap-5 w-2/5">
           {/* intro stuff */}
