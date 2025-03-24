@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface ExperienceItemProps {
     logo: string;
     altText: string;
@@ -8,40 +10,36 @@ interface ExperienceItemProps {
     link: string;
 }
 
+const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, title, dates, company, description, link }) => {
+    return (
+        <div className="flex font-semibold">
+            <Link href={link} target="_blank" className="mb-3 mr-3">
+                <img src={logo} alt={title} className="rounded-full max-w-12 max-h-12 hover:scale-105 transform duration-300"/>
+            </Link>
+            <div className="flex flex-col gap-1">
+                <p className="text-sm lg:text-2xl font-stretch-semi-expanded">{title}</p>
+                <p className="text-md italic lg:hidden" >{dates}</p>
+                <p className="text-xs lg:text-lg text-gray-500 italic mb-2">{company}</p>
+                <ul className="list-disc text-md font-thin">
+                    {description.map((desc, index) => (
+                        <li key={index}>{desc}</li>
+                    ))}
+                </ul>
+            </div>
+            <p className="ml-auto hidden lg:inline-flex lg:text-xl">{dates}</p>
+        </div>
+    );
+};
 
 export default function Experience() {
-    const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, altText, title, dates, company, description, link }) => {
-        return (
-            <div className="flex flex-col">
-                <div className="w-full flex font-semibold">
-                    <a href={link} target="_blank" className="mb-3 mr-3">
-                        <img 
-                            src={logo} 
-                            alt={altText} 
-                            className="rounded-full max-w-12 max-h-12 hover:scale-105 transform duration-300" 
-                        />
-                    </a>
-                    <div className="flex flex-col gap-1">
-                        <p className="text-sm lg:text-2xl">{title}</p>
-                        <p className="text-md italic lg:hidden">{dates}</p>
-                        <p className="text-xs lg:text-lg text-gray-500 italic mb-2">{company}</p>
-                        <ul className="list-disc text-md font-thin">
-                            {description.map((desc, index) => (
-                                <li key={index}>{desc}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <p className="ml-auto hidden lg:inline-flex lg:text-xl">{dates}</p>
-                </div>
-            </div>
-        );
-    };
     return (
         <div id="experience" className="flex min-h-screen">
-            <div className="flex flex-col m-auto w-2/3 h-3/5 gap-15">
-                <h1 className="font-semibold text-5xl">my experience</h1>
+            <div className="flex flex-col m-auto w-2/3 h-3/5 gap-10">
+                <div className="flex flex-col gap-3">
+                    <h1 className="font-stretch-semi-expanded text-5xl">my experience</h1>
+                    <p className="italic"> i'm extremely grateful for the places i've worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
+                </div>
                 <div className="flex flex-col gap-5">
-
                     <ExperienceItem 
                         logo="/klic.png"
                         altText="KlicAI Logo"
