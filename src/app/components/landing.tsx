@@ -49,7 +49,7 @@ export default function Landing() {
               <Link href="https://linkedin.com/in/nathan-ong17" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="w-5 md:w-10 h-5 md:h-10 transform hover:scale-110 transition duration-300"/>
               </Link>
-              <Link href="https://drive.google.com/file/d/1hrQCF9BI1LqbGClV4TOg6mQUktWvwqNf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <Link href="https://drive.google.com/file/d/1KpuuGPcz9wo03Zo70ziHRnwWvi419djy/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <FaRegFileAlt className="w-5 md:w-10 h-5 md:h-10 transform hover:scale-110 transition duration-300"/>
               </Link>
             </ul>
