@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
             transition={{ duration: 0.7, ease: "easeOut" }}>
 
             <div className="relative group mx-auto">
-                <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
+                <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50 group-hover:cursor-pointer"/>
                 <Link 
                     href={link} 
                     target="_blank" 
@@ -62,7 +62,7 @@ export default function Projects() {
         },
         {
             title: "This Portfolio!",
-            caption: "idk what to put here yet...",
+            caption: "🎨 Great Frontend Practice",
             description: "My Personal Portfolio to showcase my current experience, projects, interests. Built and designed from scratch (still working on my design skills 😅). I'm always looking to improve, so if you have any feedback, please let me know :)",
             image: "retinova.jpg",
             techstack: ['figma.png', 'react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'framer.svg'],
@@ -70,8 +70,8 @@ export default function Projects() {
         },
         {
             title: "FantasyEdge 🏈",
-            caption: "😿 Did not win my league this year",
-            description: "As an avid fantasy football player, over summer I wanted to create an app that would help me and others with the upcoming season. Used Django to create a full-stack website that helps users manage their teams.",
+            caption: "😿 Did Not Win My League This Year",
+            description: "As an avid fantasy football player, over summer 2024 I wanted to create an app that would help me and others with the upcoming season. Used Django to create a full-stack website that helps users manage their teams.",
             image: "fantasyedge.png",
             techstack: ['django.svg', 'python.png', 'javascript.png', 'postgres.png', 'html.webp', 'css.png'],
             link: "https://fantasy-edge.vercel.app"
@@ -97,7 +97,7 @@ export default function Projects() {
             caption: "🦖 Submission @ LA Hacks 2024",
             description: "This project hold a special place in my heart as it was both my first hackathon and personal project. My teammate and I both loved traveling, so we decided to make a website that takes in a location and displays the top 7 attractions in that city.",
             image: "duckhunt.png",
-            techstack: ['javascript.png', 'bootstrap.svg', 'html.webp', 'css.png', 'python.png'],
+            techstack: ['javascript.png', 'bootstrap.svg', 'html.webp', 'css.png'],
             link: "https://nonathan17.github.io/DuckHunt/"
         },
     ];
@@ -111,7 +111,7 @@ export default function Projects() {
                     viewport={{ once: true, amount: 0.5 }}>
                 <div className="flex flex-col gap-3">
                     <h1 className="font-stretch-semi-expanded text-5xl">featured projects</h1>
-                    <p className="italic"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects about things i am passionate about or that solve everyday problems.</p>
+                    <p className="italic"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects that solve everyday problems or about things i am passionate about.</p>
                 </div>
             </motion.div>
             <motion.div
