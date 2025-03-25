@@ -23,7 +23,8 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 1, scale: 1 },
             }}
-            transition={{ duration: 0.7, ease: "easeOut" }}>
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            drag dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }} dragElastic={0.2}>
 
             <div className="relative group mx-auto">
                 <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50 group-hover:cursor-pointer"/>
@@ -105,7 +106,7 @@ export default function Projects() {
         <div id="projects" className="flex min-h-screen">
             <div className="flex flex-col m-auto w-2/3 h-3/5 gap-10 my-20">
             <motion.div
-                    initial={{opacity: 0, skewX: 10}}
+                    initial={{opacity: 0, skewX: -10}}
                     whileInView={{opacity: 1, skewX: 0}}
                     transition={{duration: 1.0, ease: 'easeOut'}}
                     viewport={{ once: true, amount: 0.5 }}>
