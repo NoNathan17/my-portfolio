@@ -1,5 +1,7 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
+import ClientRoot from "./ClientRoot";
 import Navbar from "./components/navbar"
 import Footer from "./components/footer"
 
@@ -15,11 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth ">
+    <html lang="en" className="scroll-smooth">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+      <ClientRoot>{children}</ClientRoot>
       </body>
     </html>
   );

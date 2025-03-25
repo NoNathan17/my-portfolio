@@ -1,16 +1,30 @@
+"use client"
+
 import { Button } from "@mui/material";
 import Stack from '@mui/material/Stack';
 import { CiMapPin } from "react-icons/ci";
 import { FaGraduationCap } from "react-icons/fa";
 import { IoIosBriefcase } from "react-icons/io";
-
+import { motion } from "motion/react";
 
 export function AboutMe() {
     return (
         <div id="about" className="flex h-screen bg-gradient-to-br from-gray-700 to-blue-900">
             {/* blurb section */}
             <div className="flex flex-col m-auto w-2/5 h-3/5 gap-10">
+            <motion.div
+                initial={{ opacity: 0, x: -100}}
+                whileInView={{ opacity: 1, x: 0}}
+                transition={{duration: 1.0, ease: "easeOut"}}
+                viewport={{ once: true, amount: 0.2 }}>
                 <h1 className="font-semibold text-5xl">first, a little about me</h1>
+            </motion.div>
+            <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 2.5, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}>
+
                 <div className="flex flex-col text-left gap-5">
                     <p>I was born and raised in Sacramento, CA (the capital!) However, for college I decided to migrate about 9 hours south to pursue a computer science degree at UCI, which is where I currently am now. (insert anteater emoji)</p>
                     <p>College was a bit daunting at first, but now in my second year, I’ve found myself exactly where I want to be. I’ve come to appreciate all facets of computer science, it’s just fascinating how a couple lines of code can turn nothing into something... </p>
@@ -32,7 +46,7 @@ export function AboutMe() {
                         </Stack>
                     </div>
                 </div>
-
+            </motion.div>
             </div>
         </div>
     );

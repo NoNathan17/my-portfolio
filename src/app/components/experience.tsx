@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link";
+import { motion } from "motion/react";
 
 interface ExperienceItemProps {
     logo: string;
@@ -12,22 +15,30 @@ interface ExperienceItemProps {
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, title, dates, company, description, link }) => {
     return (
-        <div className="flex font-semibold">
-            <Link href={link} target="_blank" className="mb-3 mr-3">
-                <img src={logo} alt={title} className="rounded-full max-w-12 max-h-12 hover:scale-105 transform duration-300"/>
-            </Link>
-            <div className="flex flex-col gap-1">
-                <p className="text-sm lg:text-2xl font-stretch-semi-expanded">{title}</p>
-                <p className="text-md italic lg:hidden" >{dates}</p>
-                <p className="text-xs lg:text-lg text-gray-500 italic mb-2">{company}</p>
-                <ul className="list-disc text-md font-thin">
-                    {description.map((desc, index) => (
-                        <li key={index}>{desc}</li>
-                    ))}
-                </ul>
-            </div>
-            <p className="ml-auto hidden lg:inline-flex lg:text-xl">{dates}</p>
-        </div>
+        <motion.div
+            className="flex font-semibold"
+            variants={{
+                hidden: { opacity: 0, rotateY: 90 },
+                visible: { opacity: 1, rotateY: 0 },
+            }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}>
+
+                <Link href={link} target="_blank" className="mb-3 mr-3">
+                    <img src={logo} alt={title} className="rounded-full max-w-12 max-h-12 hover:scale-105 transform duration-300"/>
+                </Link>
+                <div className="flex flex-col gap-1">
+                    <p className="text-sm lg:text-2xl font-stretch-semi-expanded">{title}</p>
+                    <p className="text-md italic lg:hidden" >{dates}</p>
+                    <p className="text-xs lg:text-lg text-gray-500 italic mb-2">{company}</p>
+                    <ul className="list-disc text-md font-thin">
+                        {description.map((desc, index) => (
+                            <li key={index}>{desc}</li>
+                        ))}
+                    </ul>
+                </div>
+                <p className="ml-auto hidden lg:inline-flex lg:text-xl">{dates}</p>
+        </motion.div>
     );
 };
 
@@ -35,10 +46,29 @@ export default function Experience() {
     return (
         <div id="experience" className="flex min-h-screen">
             <div className="flex flex-col m-auto w-2/3 h-3/5 gap-10">
-                <div className="flex flex-col gap-3">
-                    <h1 className="font-stretch-semi-expanded text-5xl">my experience</h1>
-                    <p className="italic"> i'm extremely grateful for the places i've worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
-                </div>
+                <motion.div
+                    initial={{opacity: 0, skewX: 10}}
+                    whileInView={{opacity: 1, skewX: 0}}
+                    transition={{duration: 1.0, ease: 'easeOut'}}
+                    viewport={{once: true, amount: 0.2}}>
+                    <div className="flex flex-col gap-3">
+                        <h1 className="font-stretch-semi-expanded text-5xl">my experience</h1>
+                        <p className="italic"> i'm extremely grateful for the places i've worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
+                    </div>
+                </motion.div>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={{
+                        hidden: {},
+                        visible: {
+                        transition: {
+                            staggerChildren: 0.4,
+                        },
+                        },
+                    }}
+                    viewport={{once: true, amount: 0.3 }}>
+
                 <div className="flex flex-col gap-5">
                     <ExperienceItem 
                         logo="/klic.png"
@@ -92,6 +122,7 @@ export default function Experience() {
                         ]}
                         link="https://codingmind.com/"/>
                 </div>
+                </motion.div>
             </div>
         </div>
     );

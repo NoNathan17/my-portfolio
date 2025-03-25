@@ -1,5 +1,7 @@
 "use client"
+
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 import Link from "next/link";
 
 export default function Navbar() {  
@@ -26,6 +28,10 @@ export default function Navbar() {
         <nav className={`fixed w-full p-6 md:py-12 md:px-28 text-xl font-stretch-semi-expanded z-50 transition-opacity duration-300 ${
             showNavbar ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}>
+        <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1.0, ease: "easeOut" }}>
             <div className="flex items-center justify-end gap-7">
                 <Link href="#/" className="duration-300 transition ease-in-out hover:text-blue-300">
                     home
@@ -43,6 +49,7 @@ export default function Navbar() {
                     contact
                 </Link>
             </div>
+        </motion.div>
         </nav>
     );
 }

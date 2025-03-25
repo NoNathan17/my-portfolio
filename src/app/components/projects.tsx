@@ -1,5 +1,8 @@
-import { FaArrowUpRightDots } from "react-icons/fa6";
+"use client"
+
 import { Button } from "@mui/material";
+import Link from "next/link";
+import { motion } from "motion/react";
 
 interface ProjectCardProps {
     title: string;
@@ -14,24 +17,37 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
     const isEven = index % 2 === 0;
 
     return (
-        <div className={`flex flex-col ${isEven ? 'mb-10' : 'mt-10'} border rounded-lg font-semibold p-5 gap-4 hover:scale-105 duration-300 text-center`}>
-            <img src={image} alt={title} className="rounded-lg mx-auto"/>
-                <div className="flex flex-col gap-3">
-                    <h1 className="text-3xl font-bold">{title}</h1>
-                    <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} className="self-center" variant="outlined">{caption}</Button>
+        <motion.div
+            className={`flex flex-col ${isEven ? 'mb-10' : 'mt-10'} border rounded-lg font-semibold p-5 gap-4 hover:scale-105 duration-300 text-center`}
+            variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.7, ease: "easeOut" }}>
+
+            <div className="relative group mx-auto">
+                <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
+                <Link 
+                    href={link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 flex items-center justify-center text-white font-thin text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+                Click to visit! 
+                </Link>
+            </div>
+            <div className="flex flex-col gap-3">
+                <h1 className="text-3xl font-bold">{title}</h1>
+                <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} className="self-center" variant="outlined">{caption}</Button>
+            </div>
+            <p className="text-md font-light">{description}</p>
+            <div className="flex gap-8">
+                <div className="flex gap-3 mx-auto">
+                    {techstack.map((src, index) => (
+                        <img key={index} src={src} className="max-w-8 max-h-8 object-contain hover:scale-110 duration-300"/>
+                    ))}
                 </div>
-                <p className="text-md font-light">{description}</p>
-                <div className="flex gap-8">
-                    <div className="flex gap-3 mx-auto">
-                        {techstack.map((src, index) => (
-                            <img key={index} src={src} className="max-w-8 max-h-8 object-contain hover:scale-110 duration-300"/>
-                        ))}
-                    </div>
-                    {/* <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" endIcon={<FaArrowUpRightDots />} href={link}>
-                        check it out here!
-                    </Button> */}
-                </div>
-        </div>
+            </div>
+        </motion.div>
     );
 };
 
@@ -88,11 +104,30 @@ export default function Projects() {
     return (
         <div id="projects" className="flex min-h-screen">
             <div className="flex flex-col m-auto w-2/3 h-3/5 gap-10 my-20">
+            <motion.div
+                    initial={{opacity: 0, skewX: 10}}
+                    whileInView={{opacity: 1, skewX: 0}}
+                    transition={{duration: 1.0, ease: 'easeOut'}}
+                    viewport={{ once: true, amount: 0.5 }}>
                 <div className="flex flex-col gap-3">
                     <h1 className="font-stretch-semi-expanded text-5xl">featured projects</h1>
                     <p className="italic"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects about things i am passionate about or that solve everyday problems.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 space-x-5">
+            </motion.div>
+            <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={{
+                        hidden: {},
+                        visible: {
+                        transition: {
+                            staggerChildren: 0.2,
+                        },
+                        },
+                    }}
+                    viewport={{once: true, amount: 0.2 }}>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 space-x-5">
                 {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
@@ -105,6 +140,7 @@ export default function Projects() {
                             index={index}/>
                         ))}
                 </div>
+            </motion.div>
             </div>
         </div>
     );
