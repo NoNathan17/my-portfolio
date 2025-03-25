@@ -36,16 +36,16 @@ export default function Navbar() {
                 <Link href="#/" className="duration-300 transition ease-in-out hover:text-blue-300">
                     home
                 </Link>
-                <Link href="#about" className="duration-300 transition ease-in-out hover:text-blue-300">
+                <Link href="#about" className="duration-300 transition ease-in-out hover:text-red-300">
                     about
                 </Link>
-                <Link href="#experience" className="duration-300 transition ease-in-out hover:text-blue-300">
+                <Link href="#experience" className="duration-300 transition ease-in-out hover:text-green-300">
                     experience
                 </Link>
-                <Link href="#projects" className="duration-300 transition ease-in-out hover:text-blue-300">
+                <Link href="#projects" className="duration-300 transition ease-in-out hover:text-orange-300">
                     projects
                 </Link>
-                <Link href="#contact" className="duration-300 transition ease-in-out hover:text-blue-300">
+                <Link href="#contact" className="duration-300 transition ease-in-out hover:text-yellow-300">
                     contact
                 </Link>
             </div>
