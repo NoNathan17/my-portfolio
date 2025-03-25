@@ -1,14 +1,14 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientRoot from "./ClientRoot";
-import Navbar from "./components/navbar"
-import Footer from "./components/footer"
 
 
 export const metadata: Metadata = {
   title: "Nathan Ong",
   description: "Nathan Ong's Portfolio",
+  icons: {
+    icon: "/favicon.ico", 
+  },
 };
 
 export default function RootLayout({
