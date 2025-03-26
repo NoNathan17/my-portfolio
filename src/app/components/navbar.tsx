@@ -42,7 +42,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Hamburger Icon for Mobile */}
-                <div className="md:hidden flex items-center">
+                <div className="lg:hidden flex items-center">
                         <button 
                             onClick={() => setMenuOpen(!menuOpen)} 
                             className="text-white z-9999">
@@ -86,7 +86,7 @@ export default function Navbar() {
                         </button>
                     </div>
 
-                    <div className="flex flex-col items-center h-full">
+                    <div className="flex flex-col items-center h-full mt-20">
                         <Link href="#/" className="block py-4 text-white text-2xl hover:text-blue-300">
                             home
                         </Link>
