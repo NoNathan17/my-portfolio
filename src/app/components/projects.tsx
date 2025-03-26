@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
                 visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            drag dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }} dragElastic={0.2}>
+            drag dragConstraints={{ left: 1, right: 1, top: 1, bottom: 1 }} dragElastic={0.2}>
 
             <div className="relative group mx-auto">
                 <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
                     padding: { xs: '6px 12px', sm: '8px 16px' }, 
                 }}>{caption}</Button>
             </div>
-            <p className="text-xs lg:text-md font-light">{description}</p>
+            <p className="text-xs lg:text-base font-light">{description}</p>
             <div className="flex gap-8">
                 <div className="flex gap-3 mx-auto">
                     {techstack.map((src, index) => (
@@ -132,7 +132,7 @@ export default function Projects() {
                     }}
                     viewport={{once: true, amount: 0.2 }}>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 lg:space-x-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 lg:space-x-7">
                 {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
