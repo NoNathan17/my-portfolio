@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
                 <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} className="self-center" variant="outlined"
                 sx={{
                     fontSize: { xs: '0.75rem', sm: '1rem' }, 
-                    padding: { xs: '6px 12px', sm: '8px 16px' }, 
+                    // padding: { xs: '6px 12px', sm: '8px 16px' }, 
                 }}>{caption}</Button>
             </div>
             <p className="text-xs lg:text-base font-light">{description}</p>
@@ -115,8 +115,8 @@ export default function Projects() {
                     transition={{duration: 1.0, ease: 'easeOut'}}
                     viewport={{ once: true, amount: 0.5 }}>
                 <div className="flex flex-col gap-3">
-                    <h1 className="font-stretch-semi-expanded text-3xl lg:text-5xl text-center lg:text-left">featured projects</h1>
-                    <p className="italic text-xs lg:text-base text-center lg:text-left"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects that solve everyday problems or about things i am passionate about.</p>
+                    <h1 className="font-stretch-semi-expanded text-3xl md:text-4xl lg:text-5xl text-center lg:text-left">featured projects</h1>
+                    <p className="italic text-xs md:text-sm lg:text-base text-center lg:text-left"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects that solve everyday problems or about things i am passionate about.</p>
                 </div>
             </motion.div>
             <motion.div
@@ -132,7 +132,7 @@ export default function Projects() {
                     }}
                     viewport={{once: true, amount: 0.2 }}>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 lg:space-x-7">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 lg:space-x-7 w-5/6 lg:w-full mx-auto">
                 {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
