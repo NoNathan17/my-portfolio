@@ -40,8 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
                 <h1 className="text-2xl lg:text-3xl font-bold">{title}</h1>
                 <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} className="self-center" variant="outlined"
                 sx={{
-                    fontSize: { xs: '0.75rem', sm: '1rem' }, 
-                    // padding: { xs: '6px 12px', sm: '8px 16px' }, 
+                    fontSize: { xs: '0.75rem', sm: '0.9rem' }, 
                 }}>{caption}</Button>
             </div>
             <p className="text-xs lg:text-base font-light">{description}</p>
@@ -71,7 +70,7 @@ export default function Projects() {
             description: "My Personal Portfolio to showcase my current experience, projects, interests. Built and designed from scratch (still working on my design skills 😅). I'm always looking to improve, so if you have any feedback, please let me know :)",
             image: "portfolio.png",
             techstack: ['figma.png', 'react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'framer.svg'],
-            link: "https://devpost.com/software/retinova"
+            link: "pfp.jpg"
         },
         {
             title: "FantasyEdge 🏈",
