@@ -11,13 +11,13 @@ export function AboutMe() {
     return (
         <div id="about" className="flex h-screen bg-gradient-to-br from-gray-700 to-blue-900">
             {/* blurb section */}
-            <div className="flex flex-col m-auto w-2/5 h-3/5 gap-10">
+            <div className="flex flex-col m-auto w-11/12 lg:w-2/5 h-5/6 lg:h-3/5 gap-5 lg:gap-10">
             <motion.div
                 initial={{ opacity: 0, x: -100}}
                 whileInView={{ opacity: 1, x: 0}}
                 transition={{duration: 1.0, ease: "easeOut"}}
                 viewport={{ once: true, amount: 0.2 }}>
-                <h1 className="font-semibold text-5xl">first, a little about me</h1>
+                <h1 className="font-semibold text-3xl lg:text-5xl text-center lg:text-left">first, a little about me</h1>
             </motion.div>
             <motion.div 
                 initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ export function AboutMe() {
                 transition={{ duration: 2.5, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.2 }}>
 
-                <div className="flex flex-col text-left gap-5">
+                <div className="flex flex-col text-center lg:text-left gap-3 lg:gap-5 text-sm lg:text-base">
                     <p>I was born and raised in Sacramento, CA (the capital!) However, for college I decided to migrate about 9 hours south to pursue a computer science degree at UCI, which is where I currently am now. (insert anteater emoji)</p>
                     <p>College was a bit daunting at first, but now in my second year, I’ve found myself exactly where I want to be. I’ve come to appreciate all facets of computer science, it’s just fascinating how a couple lines of code can turn nothing into something... </p>
                     <p>I’m constantly learning and always looking for opportunities to apply myself. SO if anyone comes across this and is looking for someone ready to contribute, feel free to reach out!</p>
@@ -33,14 +33,28 @@ export function AboutMe() {
                     {/* TLDR */}
                     <div className="flex flex-col gap-3">
                         <p className="mt-3">TLDR:</p>
-                        <Stack direction="row" spacing={2}>
-                            <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<CiMapPin />}>
+                        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{
+                            alignItems: { xs: 'center', sm: 'flex-start' } 
+                        }}>
+                            <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<CiMapPin />}
+                                sx={{
+                                    fontSize: { xs: '0.75rem', sm: '1rem' }, 
+                                    width: { xs: '58%', sm: 'auto' } 
+                                }}>
                                 Sacramento, CA
                             </Button>
-                            <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<FaGraduationCap />}>
+                            <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<FaGraduationCap />}
+                                sx={{
+                                    fontSize: { xs: '0.75rem', sm: '1rem' }, 
+                                    width: { xs: '58%', sm: 'auto' } 
+                                }}>
                                 UC Irvine
                             </Button>
-                            <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<IoIosBriefcase />}>
+                            <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<IoIosBriefcase />}
+                                sx={{
+                                    fontSize: { xs: '0.75rem', sm: '1rem' }, 
+                                    width: { xs: '58%', sm: 'auto' } 
+                                }}>
                                 Seeking Internships (plz)
                             </Button>
                         </Stack>

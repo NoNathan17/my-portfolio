@@ -25,13 +25,13 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, title, dates, com
             viewport={{ once: true, amount: 0.3 }}>
 
                 <Link href={link} target="_blank" className="mb-3 mr-3">
-                    <img src={logo} alt={title} className="rounded-full max-w-12 max-h-12 hover:scale-105 transform duration-300"/>
+                    <img src={logo} alt={title} className="rounded-full max-w-9 lg:max-w-12 max-h-9 lg:max-h-12 hover:scale-105 transform duration-300"/>
                 </Link>
                 <div className="flex flex-col gap-1">
-                    <p className="text-sm lg:text-2xl font-stretch-semi-expanded">{title}</p>
-                    <p className="text-md italic lg:hidden" >{dates}</p>
+                    <p className="text-md lg:text-2xl font-stretch-semi-expanded">{title}</p>
+                    <p className="text-xs italic lg:hidden" >{dates}</p>
                     <p className="text-xs lg:text-lg text-gray-500 italic mb-2">{company}</p>
-                    <ul className="list-disc text-md font-thin">
+                    <ul className="list-disc text-xs lg:text-base font-thin">
                         {description.map((desc, index) => (
                             <li key={index}>{desc}</li>
                         ))}
@@ -73,7 +73,7 @@ export default function Experience() {
             logo: "UCI.png",
             altText: "UCI Logo",
             title: "Python Programming Learning Assistant",
-            company: "KlicAI",
+            company: "Donald Bren School of Information & Computer Science",
             dates: "Jan. 2025 - Mar.2025",
             description: [
                 'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
@@ -99,15 +99,15 @@ export default function Experience() {
     ]
     return (
         <div id="experience" className="flex min-h-screen">
-            <div className="flex flex-col m-auto w-2/3 h-3/5 gap-10">
+            <div className="flex flex-col m-auto w-11/12 md:w-2/3 gap-7 lg:gap-10 mt-10 lg:mt-auto">
                 <motion.div
                     initial={{opacity: 0, skewX: 10}}
                     whileInView={{opacity: 1, skewX: 0}}
                     transition={{duration: 1.0, ease: 'easeOut'}}
                     viewport={{once: true, amount: 0.2}}>
                     <div className="flex flex-col gap-3">
-                        <h1 className="font-stretch-semi-expanded text-5xl">my experience</h1>
-                        <p className="italic"> i'm extremely grateful for the places i've worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
+                        <h1 className="font-stretch-semi-expanded text-3xl lg:text-5xl text-center lg:text-left">my experience</h1>
+                        <p className="italic text-xs lg:text-base text-center lg:text-left"> i'm extremely grateful for the places i've worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
                     </div>
                 </motion.div>
                 <motion.div

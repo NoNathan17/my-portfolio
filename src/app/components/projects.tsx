@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
 
     return (
         <motion.div
-            className={`flex flex-col ${isEven ? 'mb-10' : 'mt-10'} border rounded-lg font-semibold p-5 gap-4 hover:scale-105 duration-300 text-center`}
+            className={`flex flex-col ${isEven ? 'lg:mb-10' : 'lg:mt-10'} border rounded-lg font-semibold p-5 gap-4 hover:scale-105 duration-300 text-center`}
             variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 1, scale: 1 },
@@ -37,14 +37,18 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
                 </Link>
             </div>
             <div className="flex flex-col gap-3">
-                <h1 className="text-3xl font-bold">{title}</h1>
-                <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} className="self-center" variant="outlined">{caption}</Button>
+                <h1 className="text-2xl lg:text-3xl font-bold">{title}</h1>
+                <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} className="self-center" variant="outlined"
+                sx={{
+                    fontSize: { xs: '0.75rem', sm: '1rem' }, 
+                    padding: { xs: '6px 12px', sm: '8px 16px' }, 
+                }}>{caption}</Button>
             </div>
-            <p className="text-md font-light">{description}</p>
+            <p className="text-xs lg:text-md font-light">{description}</p>
             <div className="flex gap-8">
                 <div className="flex gap-3 mx-auto">
                     {techstack.map((src, index) => (
-                        <img key={index} src={src} className="max-w-8 max-h-8 object-contain hover:scale-110 duration-300"/>
+                        <img key={index} src={src} className="max-w-6 lg:max-w-8 max-h-6 lg:max-h-8 object-contain hover:scale-110 duration-300"/>
                     ))}
                 </div>
             </div>
@@ -104,15 +108,15 @@ export default function Projects() {
     ];
     return (
         <div id="projects" className="flex min-h-screen">
-            <div className="flex flex-col m-auto w-2/3 h-3/5 gap-10 my-20">
+            <div className="flex flex-col m-auto w-11/12 lg:w-2/3 gap-7 lg:gap-10 my-20">
             <motion.div
                     initial={{opacity: 0, skewX: -10}}
                     whileInView={{opacity: 1, skewX: 0}}
                     transition={{duration: 1.0, ease: 'easeOut'}}
                     viewport={{ once: true, amount: 0.5 }}>
                 <div className="flex flex-col gap-3">
-                    <h1 className="font-stretch-semi-expanded text-5xl">featured projects</h1>
-                    <p className="italic"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects that solve everyday problems or about things i am passionate about.</p>
+                    <h1 className="font-stretch-semi-expanded text-3xl lg:text-5xl text-center lg:text-left">featured projects</h1>
+                    <p className="italic text-xs lg:text-base text-center lg:text-left"> here are some of the projects i’ve worked on! <br></br>i enjoy making projects that solve everyday problems or about things i am passionate about.</p>
                 </div>
             </motion.div>
             <motion.div
@@ -128,7 +132,7 @@ export default function Projects() {
                     }}
                     viewport={{once: true, amount: 0.2 }}>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 space-x-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 lg:space-x-5">
                 {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
