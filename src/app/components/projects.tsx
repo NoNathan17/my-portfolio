@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
             drag dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }} dragElastic={0.2}>
 
             <div className="relative group mx-auto">
-                <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50 group-hover:cursor-pointer"/>
+                <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
                 <Link 
                     href={link} 
                     target="_blank" 
@@ -65,7 +65,7 @@ export default function Projects() {
             title: "This Portfolio!",
             caption: "🎨 Great Frontend Practice",
             description: "My Personal Portfolio to showcase my current experience, projects, interests. Built and designed from scratch (still working on my design skills 😅). I'm always looking to improve, so if you have any feedback, please let me know :)",
-            image: "retinova.jpg",
+            image: "portfolio.png",
             techstack: ['figma.png', 'react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'framer.svg'],
             link: "https://devpost.com/software/retinova"
         },

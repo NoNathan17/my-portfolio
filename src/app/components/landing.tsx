@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaRegFileAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegFileAlt, FaArrowDown } from "react-icons/fa";
 import { motion } from "motion/react";
 import Typed from "typed.js";
 import React, { useEffect, useRef } from "react";
@@ -24,8 +24,8 @@ export default function Landing() {
 	}, []);
 
   return (
-    <div id="/" className="flex h-screen">
-      <div className="flex flex-row mx-auto items-center justify-center w-5/6 h-3/4 gap-32">
+    <div id="/" className="flex flex-col h-screen">
+      <div className="flex flex-row mx-auto items-center justify-center w-5/6 h-3/4 gap-24">
         <div className="flex flex-col gap-5 w-2/5">
           {/* intro stuff */}
             <p className="text-7xl font-bold min-h-[4.5rem]">
@@ -58,7 +58,7 @@ export default function Landing() {
 
         {/* profile picture */}
         <motion.img
-          src="/pfp.jpg"
+          src="/pfp.png"
           alt="profile pic"
           className="max-w-1/4 max-h-1/2 h-auto object-contain rounded-lg transition-transform duration-500 hover:rotate-x-12 hover:rotate-y-12"
           initial={{ opacity: 0  }}
@@ -67,6 +67,15 @@ export default function Landing() {
           viewport={{ once: true }}
         />      
       </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1}}
+        transition={{duration: 4.0, ease: "easeOut"}}
+        viewport={{ once: true}}>
+        <Link href="#about">
+          <FaArrowDown className="w-5 md:w-12 h-5 md:h-12 justify-self-center animate-bounce"/>
+        </Link>
+      </motion.div>
     </div>
   );
 }
