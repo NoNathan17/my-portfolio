@@ -33,8 +33,8 @@ export function AboutMe() {
                     {/* TLDR */}
                     <div className="flex flex-col gap-3">
                         <p className="mt-3">TLDR:</p>
-                        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{
-                            alignItems: { xs: 'center', sm: 'flex-start' } 
+                        <Stack direction={{ xs: 'column', lg: 'row' }} spacing={2} sx={{
+                            alignItems: { xs: 'center', lg: 'flex-start' } 
                         }}>
                             <Button style={{ color: 'white', borderColor: 'white', textTransform: 'none' }} variant="outlined" startIcon={<CiMapPin />}
                                 sx={{
