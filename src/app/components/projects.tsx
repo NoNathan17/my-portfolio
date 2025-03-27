@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
 
     return (
         <motion.div
-            className={`flex flex-col ${isEven ? 'lg:mb-10' : 'lg:mt-10'} border rounded-lg font-semibold p-5 p gap-4 hover:scale-105 duration-300 text-center`}
+            className={`flex flex-col ${isEven ? 'lg:mb-10' : 'lg:mt-10'} border rounded-lg font-semibold p-5 gap-4 hover:scale-105 duration-300 text-center`}
             variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 1, scale: 1 },
@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
             drag dragConstraints={{ left: 1, right: 1, top: 1, bottom: 1 }} dragElastic={0.2}>
 
             <div className="relative group mx-auto">
-                <Image src={image} alt={title} layout="responsive" width={300} height={300} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
+                <Image src={image} alt={title} layout="responsive" width={300} height={300} className="max-w-full rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
                 <Link 
                     href={link} 
                     target="_blank" 
@@ -132,7 +132,7 @@ export default function Projects() {
                     }}
                     viewport={{once: true, amount: 0.2 }}>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 lg:space-x-7 w-5/6 lg:w-full mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-5/6 lg:w-full mx-auto">
                 {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
