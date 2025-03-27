@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
             drag dragConstraints={{ left: 1, right: 1, top: 1, bottom: 1 }} dragElastic={0.2}>
 
             <div className="relative group mx-auto">
-                <Image src={image} alt={title} width={48} height={48} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
+                <Image src={image} alt={title} layout="responsive" width={100} height={100} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
                 <Link 
                     href={link} 
                     target="_blank" 
@@ -61,7 +61,7 @@ export default function Projects() {
             title: "RetiNova 👁️",
             caption: "🏆 1st Place Finish @ IrvineHacks 2025",
             description: "With medical error being a growing concern, my teammates and I developed an AI-powered platform that gives users in-depth eye diagnosis for cataracts and uveitis, putting the power in the patient's hands. Awarded 1st place for our efforts! ",
-            image: "/retinova.jpg",
+            image: "/retinova.png",
             techstack: ['react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'material.png', 'opencv.png'],
             link: "https://devpost.com/software/retinova"
         },
