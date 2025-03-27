@@ -51,9 +51,9 @@ export default function Experience() {
             company: "KlicAI",
             dates: "Dec. 2024 - Present",
             description: [
-                'Implemented secure RESTful APIs with Node.js and Express.js to support an innovative dating application',
-                'Managed database schemas with MongoDB, optimizing storage for user profiles, match data, and rewards',
-                'Integrated a token-based reward system and personalized user suggestions for a seamless backend architecture'
+                'Built secure RESTful APIs using Node.js and Express.js for a cutting-edge AI-powered dating application',
+                'Designed efficient MongoDB schemas, optimizing storage for dynamic user profiles, match data, and rewards',
+                'Engineered a token-based reward system and intelligent matching logic, streamlining the backend architecture'
             ],
             link: "https://klic-ai.com",
         },
@@ -66,7 +66,7 @@ export default function Experience() {
             description: [
                 'Worked in a team of 8 to develop an automated computer vision system to help patients diagnose melanoma',
                 'Applied image preprocessing techniques with OpenCV to improve the accuracy of skin lesion detection',
-                'Developed the CareTech website, utilizing React, Tailwind CSS, and TypeScript for the frontend design'
+                'Developed the CareTech website using React/TypeScript, serving as the central platform for 120+ members'
             ],
             link: "https://caretechuci.vercel.app",
         },
@@ -78,8 +78,8 @@ export default function Experience() {
             dates: "Jan. 2025 - Mar.2025",
             description: [
                 'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
-                'Facilitated triweekly lab sections for 45+ students, providing guidance through difficult programming concepts',
-                'Conducted one-hour long weekly office hours, addressing unique questions and challenges for 180 students',
+                'Facilitated triweekly lab sections for 45+ students, guiding real-time debugging and explaining difficult concepts',
+                'Conducted hour-long weekly office hours, giving tailored support for 180 students throughout the quarter',
             ],
             link: "https://ics.uci.edu/",
         },
