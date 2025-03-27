@@ -70,7 +70,7 @@ export default function Projects() {
             description: "My Personal Portfolio to showcase my current experience, projects, interests. Built and designed from scratch (still working on my design skills 😅). I'm always looking to improve, so if you have any feedback, please let me know :)",
             image: "portfolio.png",
             techstack: ['figma.png', 'react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'framer.svg'],
-            link: "pfp.jpg"
+            link: "#/"
         },
         {
             title: "FantasyEdge 🏈",
