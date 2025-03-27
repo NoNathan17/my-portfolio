@@ -28,7 +28,7 @@ export default function Landing() {
       <div className="flex flex-col lg:flex-row mx-auto items-center justify-center w-full lg:w-5/6 h-full lg:h-3/4 gap-10 lg:gap-24">
         <div className="flex flex-col gap-4 lg:gap-5 w-11/12 lg:w-2/5 text-center lg:text-left">
           {/* intro stuff */}
-            <p className="text-3xl md:text-5xl lg:text-7xl font-bold lg:min-h-[4.5rem]">
+            <p className="text-3xl md:text-4xl lg:text-7xl font-bold lg:min-h-[4.5rem]">
               <span ref={typedRef}/>
             </p>
             <motion.div 
