@@ -75,7 +75,7 @@ export default function Experience() {
             altText: "UCI Logo",
             title: "Python Programming Learning Assistant",
             company: "Donald Bren School of Information & Computer Science",
-            dates: "Jan. 2025 - Mar.2025",
+            dates: "Jan. 2025 - Mar. 2025",
             description: [
                 'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
                 'Facilitated triweekly lab sections for 45+ students, guiding real-time debugging and explaining difficult concepts',
