@@ -108,7 +108,7 @@ export default function Experience() {
                     viewport={{once: true, amount: 0.2}}>
                     <div className="flex flex-col gap-3">
                         <h1 className="font-stretch-semi-expanded text-3xl md:text-4xl lg:text-5xl text-center lg:text-left">my experience</h1>
-                        <p className="italic text-xs md:text-sm lg:text-base text-center lg:text-left"> i'm extremely grateful for the places i've worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
+                        <p className="italic text-xs md:text-sm lg:text-base text-center lg:text-left"> i&apos;m extremely grateful for the places i&apos;ve worked at so far! <br></br> from teaching students, to working with AI, to contributing to exciting startups.</p>
                     </div>
                 </motion.div>
                 <motion.div

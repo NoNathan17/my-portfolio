@@ -2,6 +2,7 @@
 
 import { Button } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 interface ProjectCardProps {
@@ -27,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps & { index: number } > = ({ title, c
             drag dragConstraints={{ left: 1, right: 1, top: 1, bottom: 1 }} dragElastic={0.2}>
 
             <div className="relative group mx-auto">
-                <img src={image} alt={title} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
+                <Image src={image} alt={title} width={48} height={48} className="rounded-lg mx-auto transition duration-300 group-hover:brightness-50"/>
                 <Link 
                     href={link} 
                     target="_blank" 
@@ -60,7 +61,7 @@ export default function Projects() {
             title: "RetiNova 👁️",
             caption: "🏆 1st Place Finish @ IrvineHacks 2025",
             description: "With medical error being a growing concern, my teammates and I developed an AI-powered platform that gives users in-depth eye diagnosis for cataracts and uveitis, putting the power in the patient's hands. Awarded 1st place for our efforts! ",
-            image: "retinova.jpg",
+            image: "/retinova.jpg",
             techstack: ['react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'material.png', 'opencv.png'],
             link: "https://devpost.com/software/retinova"
         },
@@ -68,7 +69,7 @@ export default function Projects() {
             title: "This Portfolio!",
             caption: "🎨 Great Frontend Practice",
             description: "My Personal Portfolio to showcase my current experience, projects, interests. Built and designed from scratch (still working on my design skills 😅). I'm always looking to improve, so if you have any feedback, please let me know :)",
-            image: "portfolio.png",
+            image: "/portfolio.png",
             techstack: ['figma.png', 'react.png', 'typescript.webp', 'next.svg', 'tailwind.png', 'framer.svg'],
             link: "#/"
         },
@@ -76,7 +77,7 @@ export default function Projects() {
             title: "FantasyEdge 🏈",
             caption: "😿 Did Not Win My League This Year",
             description: "As an avid fantasy football player, over summer 2024 I wanted to create an app that would help me and others with the upcoming season. Used Django to create a full-stack website that helps users manage their teams.",
-            image: "fantasyedge.png",
+            image: "/fantasyedge.png",
             techstack: ['django.svg', 'python.png', 'javascript.png', 'postgres.png', 'html.webp', 'css.png'],
             link: "https://fantasy-edge.vercel.app"
         },
@@ -84,7 +85,7 @@ export default function Projects() {
             title: "Nutri 🏋️‍♂️",
             caption: "🍇 Submission @ WebJam 2024",
             description: "Worked with two friends and developed a web application that provides personalized fitness feedback, including workouts, meal plans, and calorie goals. Didn't win anything, but learned a lot for our next opportunity...  ",
-            image: "nutri.png",
+            image: "/nutri.png",
             techstack: ['django.svg', 'react.png', 'tailwind.png', 'typescript.webp', 'python.png'],
             link: "https://github.com/NoNathan17/nutri"
         },
@@ -92,7 +93,7 @@ export default function Projects() {
             title: "TwinTunes 🎶",
             caption: "🤓 Built over Winter Break 2024",
             description: "Made this project because my sister complained there wasn't an easy way to identify duplicate songs within spotify playlists. Used Spotify's API to retrieve playlists and some Python logic for finding duplicates. Now there is an easy way...   ",
-            image: "twintunes.png",
+            image: "/twintunes.png",
             techstack: ['flask.svg', 'python.png', 'html.webp', 'css.png', 'spotify.png'],
             link: "https://github.com/NoNathan17/TwinTunes"
         },
@@ -100,7 +101,7 @@ export default function Projects() {
             title: "Duck Hunt 🦆",
             caption: "🦖 Submission @ LA Hacks 2024",
             description: "This project hold a special place in my heart as it was both my first hackathon and personal project. My teammate and I both loved traveling, so we decided to make a website that takes in a location and displays the top 7 attractions in that city.",
-            image: "duckhunt.png",
+            image: "/duckhunt.png",
             techstack: ['javascript.png', 'bootstrap.svg', 'html.webp', 'css.png'],
             link: "https://nonathan17.github.io/DuckHunt/"
         },
