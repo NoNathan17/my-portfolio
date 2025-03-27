@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi";
 
 export default function Footer() {  
     return (
-    <footer id="contact" className="flex flex-col text-center py-4 text-base lg:text-lg lg mx-auto gap-2">
+    <footer id="contact" className="relative flex flex-col text-center py-4 text-base lg:text-lg lg mx-auto gap-2">
     	&copy; 2025 Nathan Ong. let's connect!
         <ul className="flex gap-4 justify-center my-auto">
             <li>
@@ -24,6 +24,12 @@ export default function Footer() {
             </Link>
             </li>
         </ul>
+        <div className="absolute flex right-2 lg:right-5 bottom-3 text-xs lg:text-base italic gap-1">
+            View Source Code 
+                <Link href="https://github.com/NoNathan17/your-repo" target="_blank" title="View Source Code" className="hover:underline">
+                    Here
+                </Link>
+        </div>
 	</footer>
     );
 }
