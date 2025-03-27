@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 interface ExperienceItemProps {
@@ -25,7 +26,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, title, dates, com
             viewport={{ once: true, amount: 0.3 }}>
 
                 <Link href={link} target="_blank" className="mb-3 mr-3">
-                    <img src={logo} alt={title} className="rounded-full max-w-9 lg:max-w-12 max-h-9 lg:max-h-12 hover:scale-105 transform duration-300"/>
+                    <Image src={logo} alt={title} width={48} height={48} className="rounded-full max-w-9 lg:max-w-12 max-h-9 lg:max-h-12 hover:scale-105 transform duration-300"/>
                 </Link>
                 <div className="flex flex-col gap-1">
                     <p className="text-md lg:text-2xl font-stretch-semi-expanded">{title}</p>
@@ -44,7 +45,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, title, dates, com
 
 export default function Experience() {
     const experiences = [{
-            logo: "klic.png",
+            logo: "/klic.png",
             altText: "KlicAI Logo",
             title: "Backend Developer Intern",
             company: "KlicAI",
@@ -57,7 +58,7 @@ export default function Experience() {
             link: "https://klic-ai.com",
         },
         {
-            logo: "caretech.jpeg",
+            logo: "/caretech.jpeg",
             altText: "CareTech logo",
             title: "Software Developer",
             company: "CareTech @ UCI Tech Committee",
@@ -70,7 +71,7 @@ export default function Experience() {
             link: "https://caretechuci.vercel.app",
         },
         {
-            logo: "UCI.png",
+            logo: "/UCI.png",
             altText: "UCI Logo",
             title: "Python Programming Learning Assistant",
             company: "Donald Bren School of Information & Computer Science",
@@ -83,7 +84,7 @@ export default function Experience() {
             link: "https://ics.uci.edu/",
         },
         {
-            logo: "codingmind.png",
+            logo: "/codingmind.png",
             altText: "Coding Mind Logo",
             title: "Coding Instructor",
             company: "Coding Mind Academy",
@@ -124,8 +125,9 @@ export default function Experience() {
                     viewport={{once: true, amount: 0.3 }}>
 
                 <div className="flex flex-col gap-5">     
-                    {experiences.map((experience) => (
+                    {experiences.map((experience, index) => (
                         <ExperienceItem
+                            key={index}
                             logo={experience.logo}
                             altText={experience.altText}
                             title={experience.title}
@@ -134,7 +136,6 @@ export default function Experience() {
                             description={experience.description}
                             link={experience.link}/>
                         ))}   
-
                 </div>
                 </motion.div>
             </div>

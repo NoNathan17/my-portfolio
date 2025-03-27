@@ -38,7 +38,7 @@ export default function Landing() {
               transition={{ duration: 1.0, ease: "easeOut" }}
               viewport={{once: true }}>
               <p className="text-sm md:text-lg lg:text-xl font-semibold"> full-stack dev | software engineering | CS @ UCI</p>
-              <p className="text-sm md:text-lg lg:text-2xl font-light"> I'm a self-motivated software developer passionate about creating and contributing to meaningful solutions.
+              <p className="text-sm md:text-lg lg:text-2xl font-light"> I&apos;m a self-motivated software developer passionate about creating and contributing to meaningful solutions.
               Always eager to learn and gain hands-on experience. &#x1F680;</p>
 
             {/* links */}
