@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientRoot from "./ClientRoot";
-
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Nathan Ong",
@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
       <ClientRoot>{children}</ClientRoot>
+      <Analytics />
       </body>
     </html>
   );
