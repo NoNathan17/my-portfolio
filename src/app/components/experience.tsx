@@ -100,7 +100,7 @@ export default function Experience() {
     ]
     return (
         <div id="experience" className="flex min-h-screen">
-            <div className="flex flex-col m-auto w-11/12 md:w-2/3 gap-7 lg:gap-10 mt-10 lg:mt-auto">
+            <div className="flex flex-col m-auto w-11/12 md:w-2/3 gap-7 lg:gap-10 mt-10">
                 <motion.div
                     initial={{opacity: 0, skewX: 10}}
                     whileInView={{opacity: 1, skewX: 0}}
