@@ -26,7 +26,7 @@ export default function Footer() {
         </ul>
         <div className="invisible lg:visible absolute flex right-5 bottom-3 text-base italic gap-1">
             View Source Code 
-                <Link href="https://github.com/NoNathan17/your-repo" target="_blank" title="View Source Code" className="hover:underline">
+                <Link href="https://github.com/NoNathan17/my-portfolio" target="_blank" title="View Source Code" className="hover:underline">
                     Here
                 </Link>
         </div>
