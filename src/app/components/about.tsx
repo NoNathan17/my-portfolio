@@ -27,7 +27,7 @@ export function AboutMe() {
 
                 <div className="flex flex-col text-center lg:text-left gap-3 lg:gap-5 text-sm lg:text-base">
                     <p>I was born and raised in Sacramento, CA (the capital!) However, for college I decided to migrate about 9 hours south to pursue a computer science degree at UCI, which is where I currently am now. (insert anteater emoji)</p>
-                    <p>College was a bit daunting at first, but now in my second year, I’ve found myself exactly where I want to be. I’ve come to appreciate all facets of computer science, it’s just fascinating how a couple lines of code can turn nothing into something... </p>
+                    <p>College was a bit daunting at first, but now in my second year, I’ve found myself exactly where I want to be. I’ve come to appreciate all facets of computer science, it’s just fascinating how a couple lines of code can turn nothing into something. </p>
                     <p>I’m constantly learning and always looking for opportunities to apply myself. SO if anyone comes across this and is looking for someone ready to contribute, feel free to reach out!</p>
 
                     {/* TLDR */}
@@ -65,41 +65,3 @@ export function AboutMe() {
         </div>
     );
 }
-
-// interface InterestProps {
-//     title: string;
-//     description: string;
-//     image: string;
-// }
-
-// export function Interests() {
-//     const Interest: React.FC<InterestProps> = ({ title, description, image}) => {
-//         return (
-//                 <div className="flex flex-col gap-5 border h-full w-1/3 m-auto text-center rounded-lg py-5 px-3">
-//                     <img src={ image } alt="interest" className="max-w-3/4 mx-auto rounded-lg" />
-//                     <p className="text-center"> { description }</p>
-//                 </div>
-//         );
-//     };
-//     return (
-//         <div className="flex h-screen">
-//             <div className="flex flex-col m-auto w-3/5 h-3/5 gap-10">
-//                 <h1 className="font-medium text-4xl">outside of coding, my interests lie in...</h1>
-//                 <div className="flex gap-10"> 
-//                     <Interest
-//                         title="Sports"
-//                         description="Although I've never been much of an athlete, I've been a huge Giants, 49ers, and Warriors fan since I was little. Ask me anything about any of these teams!"
-//                         image="/pfp.jpg"/>
-//                     <Interest
-//                         title="Music"
-//                         description="I'll pretty much listen to anything (except country), but my favorite genres are rap, r&b, and k-pop. Current favo"
-//                         image="/pfp.jpg"/>
-//                     <Interest
-//                         title="Photography"
-//                         description="blah blah"
-//                         image="/pfp.jpg"/>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
