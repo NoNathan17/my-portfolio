@@ -45,17 +45,45 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ logo, title, dates, com
 
 export default function Experience() {
     const experiences = [{
-            logo: "/klic.png",
-            altText: "KlicAI Logo",
-            title: "Backend Developer Intern",
-            company: "KlicAI",
-            dates: "Dec. 2024 - Present",
+            logo: "/ecp.png",
+            altText: "ECP Logo",
+            title: "Information Technology Intern",
+            company: "Ethan Conrad Properties Inc.",
+            dates: "Jun. 2024 - Present",
             description: [
-                'Built secure RESTful APIs using Node.js and Express.js for a cutting-edge AI-powered dating application',
-                'Designed efficient MongoDB schemas, optimizing storage for dynamic user profiles, match data, and rewards',
-                'Engineered a token-based reward system and intelligent matching logic, streamlining the backend architecture'
+                'Built a prop. management platform with FastAPI, PostgreSQL, and React, streamlining tasks for 200+ users',
+                'Designed SQL schemas and CRUD endpoints for property data, enforcing data security with Azure OAuth',
+                'Migrated legacy data systems to the cloud using DigitalOcean, enhancing system scalability and saving $21k/yr',
+                'Automated IT inventory management using webhook-based workflows with n8n, reducing lookup time by 100%'
             ],
-            link: "https://klic-ai.com",
+            link: "https://ethanconradprop.com/",
+        },
+        {
+            logo: "/hack.png",
+            altText: "Hack Logo",
+            title: "Web Developer",
+            company: "Hack @ UCI",
+            dates: "Apr. 2025 - Present",
+            description: [
+                'Developed the IrvineHacks site using React, Next.js, MongoDB, and FastAPI, serivng 800+ applicants',
+                'Adapted a scalable backend with UCI’s SSO and RESTful APIs to manage auth and application processes',
+                'Integrated a dynamic content system using Sanity, enabling real-time updates to event info without redeployment',
+                'Wrote unit tests with MagicMock and Pytest for API endpoints, reducing bugs and improving code reliability'
+            ],
+            link: "https://ics.uci.edu/",
+        },
+        {
+            logo: "/petmap.png",
+            altText: "PetMap Logo",
+            title: "Software Engineering Intern",
+            company: "PetMap",
+            dates: "Mar. 2025 - Present",
+            description: [
+                'Worked in an Agile team of 6 to build a dog-network platform, driving progress through sprints and code review',
+                'Integrated Google Sign-in via Firebase Auth and Admin SDK, securing feature access to verified users only',
+                'Led end-to-end development of profile management workflows with RHF + Zod, assisting 55+ active users'
+            ],
+            link: "https://codingmind.com/",
         },
         {
             logo: "/caretech.jpeg",
@@ -64,37 +92,11 @@ export default function Experience() {
             company: "CareTech @ UCI Tech Committee",
             dates: "Oct. 2024 - Present",
             description: [
-                'Worked in a team of 8 to develop an automated computer vision system to help patients diagnose melanoma',
-                'Applied image preprocessing techniques with OpenCV to improve the accuracy of skin lesion detection',
-                'Developed the CareTech website using React/TypeScript, serving as the central platform for 120+ members'
+                'Collaborated with a team of 8 in developing an automated computer vision system for early melanoma diagnosis',
+                'Enhanced 25,000+ skin images with OpenCV, applied hair removal, noise reduction, and contrast enhancement',
+                'Trained a custom CNN in TensorFlow Keras, achieved 82% accuracy with normalization and optimization callbacks'
             ],
             link: "https://caretechuci.vercel.app",
-        },
-        {
-            logo: "/UCI.png",
-            altText: "UCI Logo",
-            title: "Python Programming Learning Assistant",
-            company: "Donald Bren School of Information & Computer Science",
-            dates: "Jan. 2025 - Mar. 2025",
-            description: [
-                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
-                'Facilitated triweekly lab sections for 45+ students, guiding real-time debugging and explaining difficult concepts',
-                'Conducted hour-long weekly office hours, giving tailored support for 180 students throughout the quarter',
-            ],
-            link: "https://ics.uci.edu/",
-        },
-        {
-            logo: "/codingmind.png",
-            altText: "Coding Mind Logo",
-            title: "Coding Instructor",
-            company: "Coding Mind Academy",
-            dates: "Oct. 2024 - Mar. 2025",
-            description: [
-                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',
-                'Worked with students through engaging lectures and coding exercises, fostering problem-solving and creativity',
-                'Shaped lesson plans for diverse student needs, exercising patience and creating an inclusive classroom environment'
-            ],
-            link: "https://codingmind.com/",
         },
         
     ]
