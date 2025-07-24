@@ -70,7 +70,7 @@ export default function Experience() {
                 'Integrated a dynamic content system using Sanity, enabling real-time updates to event info without redeployment',
                 'Wrote unit tests with MagicMock and Pytest for API endpoints, reducing bugs and improving code reliability'
             ],
-            link: "https://ics.uci.edu/",
+            link: "https://hack.ics.uci.edu/",
         },
         {
             logo: "/petmap.png",
@@ -83,7 +83,7 @@ export default function Experience() {
                 'Integrated Google Sign-in via Firebase Auth and Admin SDK, securing feature access to verified users only',
                 'Led end-to-end development of profile management workflows with RHF + Zod, assisting 55+ active users'
             ],
-            link: "https://codingmind.com/",
+            link: "",
         },
         {
             logo: "/caretech.jpeg",
