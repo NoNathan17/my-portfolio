@@ -100,15 +100,13 @@ export default function Experience() {
             link: "https://caretechuci.vercel.app",
         },
         {
-            logo: "/uci.png",
+            logo: "/UCI.png",
             altText: "UCI Logo",
             title: "Python Programming Learning Assistant",
             company: "UCI Donald Bren School of Information & Computer Sciences",
             dates: "Jan. 2025 - Mar. 2025",
             description: [
-                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
-                'Facilitated triweekly lab sections for 45+ students, guiding real-time debugging and explaining difficult concepts',
-                'Conducted hour-long weekly office hours, giving tailored support for 180 students throughout the quarter',
+                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course, supporting 180+ students through weekly lab sessions and office hours',
             ],
             link: "https://ics.uci.edu/",
         },
@@ -119,9 +117,7 @@ export default function Experience() {
             company: "Coding Mind Academy",
             dates: "Oct. 2024 - Mar. 2025",
             description: [
-                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',
-                'Worked with students through engaging lectures and coding exercises, fostering problem-solving and creativity',
-                'Shaped lesson plans for diverse student needs, exercising patience and creating an inclusive classroom environment',
+                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',,
             ],
             link: "https://codingmind.com/",
         },
