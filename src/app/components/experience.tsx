@@ -106,7 +106,7 @@ export default function Experience() {
             company: "UCI Donald Bren School of Information & Computer Sciences",
             dates: "Jan. 2025 - Mar. 2025",
             description: [
-                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course'
+                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
                 'Facilitated weekly lab sessions and office hours, guiding real-time debugging and support for 180+ students ',
             ],
             link: "https://ics.uci.edu/",
