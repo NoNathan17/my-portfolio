@@ -106,7 +106,8 @@ export default function Experience() {
             company: "UCI Donald Bren School of Information & Computer Sciences",
             dates: "Jan. 2025 - Mar. 2025",
             description: [
-                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course, supporting 180+ students through weekly lab sessions and office hours',
+                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course'
+                'Facilitated weekly lab sessions and office hours, guiding real-time debugging and support for 180+ students ',
             ],
             link: "https://ics.uci.edu/",
         },
@@ -117,7 +118,8 @@ export default function Experience() {
             company: "Coding Mind Academy",
             dates: "Oct. 2024 - Mar. 2025",
             description: [
-                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',
+                'Educated K-12 students on topics such as Python, Web Development, and Artificial Intelligence',
+                'Create an inclusive class environment through dynamic exercises, fostering problem-solving and creativity'
             ],
             link: "https://codingmind.com/",
         },
