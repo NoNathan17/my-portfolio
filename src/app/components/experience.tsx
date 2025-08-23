@@ -49,7 +49,7 @@ export default function Experience() {
             altText: "ECP Logo",
             title: "Information Technology Intern",
             company: "Ethan Conrad Properties Inc.",
-            dates: "Jun. 2024 - Present",
+            dates: "Jun. 2025 - Present",
             description: [
                 'Built a prop. management platform with FastAPI, PostgreSQL, and React, streamlining tasks for 200+ users',
                 'Designed SQL schemas and CRUD endpoints for property data, enforcing data security with Azure OAuth',
