@@ -117,7 +117,7 @@ export default function Experience() {
             company: "Coding Mind Academy",
             dates: "Oct. 2024 - Mar. 2025",
             description: [
-                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',,
+                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',
             ],
             link: "https://codingmind.com/",
         },
