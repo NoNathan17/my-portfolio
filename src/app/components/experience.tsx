@@ -51,10 +51,10 @@ export default function Experience() {
             company: "Ethan Conrad Properties Inc.",
             dates: "Jun. 2025 - Present",
             description: [
-                'Built a prop. management platform with FastAPI, PostgreSQL, and React, streamlining tasks for 200+ users',
-                'Designed SQL schemas and CRUD endpoints for property data, enforcing data security with Azure OAuth',
-                'Migrated legacy data systems to the cloud using DigitalOcean, enhancing system scalability and saving $21k/yr',
-                'Automated IT inventory management using webhook-based workflows with n8n, reducing lookup time by 100%'
+                'Built a property management platform (FastAPI, PostgreSQL, React), streamlining tasks for 200+ employees',
+                'Engineered SQL schemas and secured APIs with Azure OAuth, enforcing RBAC and enhanced data security',
+                'Migrated legacy on-premise systems to DigitalOcean cloud infrastructure, saving $21K annually in hosting costs',
+                'Automated IT inventory tracking using n8n webhooks and custom workflows, eliminating manual lookup time'
             ],
             link: "https://ethanconradprop.com/",
         },
@@ -65,9 +65,9 @@ export default function Experience() {
             company: "Hack @ UCI",
             dates: "Apr. 2025 - Present",
             description: [
-                'Developed the IrvineHacks site using React, Next.js, MongoDB, and FastAPI, serivng 800+ applicants',
-                'Adapted a scalable backend with UCI’s SSO and RESTful APIs to manage auth and application processes',
-                'Integrated a dynamic content system using Sanity, enabling real-time updates to event info without redeployment',
+                'Developed the IrvineHacks site using React, Next.js, MongoDB, and FastAPI, serving 800+ applicants',
+                'Implemented a scalable backend with UCI SSO and RESTful APIs, enabling seamless auth and submission flow',
+                'Integrated real-time content management using Sanity CMS, eliminating need for redeployment during the event',
                 'Wrote unit tests with MagicMock and Pytest for API endpoints, reducing bugs and improving code reliability'
             ],
             link: "https://hack.ics.uci.edu/",
@@ -79,7 +79,7 @@ export default function Experience() {
             company: "PetMap",
             dates: "Mar. 2025 - Present",
             description: [
-                'Worked in an Agile team of 6 to build a dog-network platform, driving progress through sprints and code review',
+                'Worked in an Agile team of 6 to build a dog-network platform, contributing to sprint planning and code reviews',
                 'Integrated Google Sign-in via Firebase Auth and Admin SDK, securing feature access to verified users only',
                 'Led end-to-end development of profile management workflows with RHF + Zod, assisting 55+ active users'
             ],
@@ -92,11 +92,38 @@ export default function Experience() {
             company: "CareTech @ UCI Tech Committee",
             dates: "Oct. 2024 - Present",
             description: [
-                'Collaborated with a team of 8 in developing an automated computer vision system for early melanoma diagnosis',
-                'Enhanced 25,000+ skin images with OpenCV, applied hair removal, noise reduction, and contrast enhancement',
-                'Trained a custom CNN in TensorFlow Keras, achieved 82% accuracy with normalization and optimization callbacks'
+                'Built a deep learning melanoma detection system by processing 25K+ dermoscopic images for early diagnosis',
+                'Applied OpenCV for hair removal, denoising, and contrast enhancement, standardizing image quality for training',
+                'Augmented and relabeled 4.5K melanoma images with pandas/NumPy, raising class balance from 18% to 47%',
+                'Trained a custom CNN in TensorFlow, achieving 82% accuracy via batch normalization and early stopping'
             ],
             link: "https://caretechuci.vercel.app",
+        },
+        {
+            logo: "/uci.png",
+            altText: "UCI Logo",
+            title: "Python Programming Learning Assistant",
+            company: "UCI Donald Bren School of Information & Computer Sciences",
+            dates: "Jan. 2025 - Mar. 2025",
+            description: [
+                'Selected as one of 12 Learning Assistants for UCI\'s foundational Object-Oriented Python Programming course',
+                'Facilitated triweekly lab sections for 45+ students, guiding real-time debugging and explaining difficult concepts',
+                'Conducted hour-long weekly office hours, giving tailored support for 180 students throughout the quarter',
+            ],
+            link: "https://ics.uci.edu/",
+        },
+        {
+            logo: "/codingmind.png",
+            altText: "Coding Mind Logo",
+            title: "Coding Instructor",
+            company: "Coding Mind Academy",
+            dates: "Oct. 2024 - Mar. 2025",
+            description: [
+                'Educated K-12 students on Python, Scratch, and Roblox Studio, enhancing their computer science skills',
+                'Worked with students through engaging lectures and coding exercises, fostering problem-solving and creativity',
+                'Shaped lesson plans for diverse student needs, exercising patience and creating an inclusive classroom environment',
+            ],
+            link: "https://codingmind.com/",
         },
         
     ]
