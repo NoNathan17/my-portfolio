@@ -27,7 +27,7 @@ export function AboutMe() {
 
                 <div className="flex flex-col text-center lg:text-left gap-3 lg:gap-5 text-sm lg:text-base">
                     <p>I was born and raised in Sacramento, CA (the capital!) However, for college I decided to migrate about 9 hours south to pursue a computer science degree at UCI, which is where I currently am now. (insert anteater emoji)</p>
-                    <p>College was a bit daunting at first, but now in my second year, I’ve found myself exactly where I want to be. I’ve come to appreciate all facets of computer science, it’s just fascinating how a couple lines of code can turn nothing into something. </p>
+                    <p>College was a bit daunting at first, but now in my third year, I’ve found myself exactly where I want to be. I’ve come to appreciate all facets of computer science, it’s just fascinating how a couple lines of code can turn nothing into something. </p>
                     <p>I’m constantly learning and always looking for opportunities to apply myself. SO if anyone comes across this and is looking for someone ready to contribute, feel free to reach out!</p>
 
                     {/* TLDR */}
